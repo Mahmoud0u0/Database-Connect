@@ -1,0 +1,8 @@
+C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\bin\Debug\DatabaseConnect.exe.config
+C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\bin\Debug\DatabaseConnect.exe
+C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\bin\Debug\DatabaseConnect.pdb
+C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\DatabaseConnect.csproj.AssemblyReference.cache
+C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\DatabaseConnect.csproj.SuggestedBindingRedirects.cache
+C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\DatabaseConnect.csproj.CoreCompileInputs.cache
+C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\DatabaseConnect.exe
+C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\DatabaseConnect.pdb
