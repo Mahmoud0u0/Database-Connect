@@ -21,17 +21,6 @@ internal class Program
         public int CountryID { get; set; }
     }
 
-    public struct stContacts
-    {
-        
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        public string Address { get; set; }
-        public int CountryID { get; set; }
-    }
-
 
     static void PrintAllData()
     {
@@ -451,7 +440,51 @@ internal class Program
         }
     }
 
+    static void UpdateContact(int ContactID, stContact Contact)
+    {
+        SqlConnection Connection = new SqlConnection(ConnectionString);
 
+        string Query = @"UPDATE Contacts SET
+                                FirstName = @FirstName,
+                                LastName = @LastName,
+                                Email = @Email,
+                                Phone = @Phone,
+                                Address = @Address,
+                                CountryID = @CountryID 
+                                WHERE ContactID = @ContactID";
+                            
+
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        Command.Parameters.AddWithValue("@ContactID", ContactID);
+        Command.Parameters.AddWithValue("@FirstName", Contact.FirstName);
+        Command.Parameters.AddWithValue("@LastName", Contact.LastName);
+        Command.Parameters.AddWithValue("@Email", Contact.Email);
+        Command.Parameters.AddWithValue("@Phone", Contact.Phone);
+        Command.Parameters.AddWithValue("@Address", Contact.Address);
+        Command.Parameters.AddWithValue("@CountryID", Contact.CountryID);
+
+        try
+        {
+            Connection.Open();
+            int rowsaffected = Command.ExecuteNonQuery();
+
+            if (rowsaffected > 0)
+            {
+                Console.WriteLine("New UPDATE ");
+                Connection.Close();
+            }
+            else
+            {
+                Console.WriteLine("Record Insertion Failed");
+            }
+        }
+        catch (Exception ex)
+        {
+
+            Console.WriteLine("Error", ex.Message);
+        }
+    }
 
 
     static void Main(string[] args)
@@ -479,7 +512,17 @@ internal class Program
             CountryID = 1
         };
 
-        AddNewContact(Contact);
+        //AddNewContact(Contact);
+        UpdateContact(1, Contact);
+
+
+
+
+
+
+
+
+
 
 
         Console.ReadKey();
