@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Diagnostics.Contracts;
 using System.Net;
 using System.Security.Policy;
 
@@ -486,6 +487,77 @@ internal class Program
         }
     }
 
+    static void DeleteContact(int ContactID)
+    {
+        SqlConnection Connection = new SqlConnection(ConnectionString);
+
+        string Query = @"DELETE FROM Contacts WHERE ContactID = @ContactID";
+
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        Command.Parameters.AddWithValue("@ContactID", ContactID);
+
+        try
+        {
+            Connection.Open();
+            int rowsaffected = Command.ExecuteNonQuery();
+
+            if (rowsaffected > 0)
+            {
+                Console.WriteLine("Newly Deleted   ");
+                Connection.Close();
+            }
+            else
+            {
+                Console.WriteLine("Record Insertion Failed");
+            }
+        }
+        catch (Exception ex)
+        {
+
+            Console.WriteLine("Error", ex.Message);
+        }
+    }
+
+    static void DeleteContacts(string Contacts)
+    {
+        SqlConnection Connection = new SqlConnection(ConnectionString);
+
+        string Query = @"DELETE FROM Contacts WHERE ContactID in ( " +  Contacts +" )";
+
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        try
+        {
+            Connection.Open();
+            int rowsaffected = Command.ExecuteNonQuery();
+
+            if (rowsaffected > 0)
+            {
+                Console.WriteLine("Newly Deleted   ");
+                Connection.Close();
+            }
+            else
+            {
+                Console.WriteLine("Record Insertion Failed");
+            }
+        }
+        catch (Exception ex)
+        {
+
+            Console.WriteLine("Error", ex.Message);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
     static void Main(string[] args)
     {
@@ -502,18 +574,20 @@ internal class Program
 
         //====== Add New Contact ======//
 
-        stContact Contact = new stContact
-        {
-            FirstName = "Adam",
-            LastName = "Ali11",
-            Email = "Email@Email.com",
-            Phone = "0988883838",
-            Address = "Beer Sheva",
-            CountryID = 1
-        };
+        //stContact Contact = new stContact
+        //{
+        //    FirstName = "Adam",
+        //    LastName = "Ali11",
+        //    Email = "Email@Email.com",
+        //    Phone = "0988883838",
+        //    Address = "Beer Sheva",
+        //    CountryID = 1
+        //};
 
         //AddNewContact(Contact);
-        UpdateContact(1, Contact);
+        //UpdateContact(1, Contact);
+        //DeleteContact(5);
+        //DeleteContacts("6,7,8");
 
 
 

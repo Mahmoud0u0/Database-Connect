@@ -6,3 +6,10 @@ C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\Databa
 C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\DatabaseConnect.csproj.CoreCompileInputs.cache
 C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\DatabaseConnect.exe
 C:\Users\97252\Desktop\C++Course\C_SharpCourse\Database-Connect\obj\Debug\DatabaseConnect.pdb
+C:\Users\Mahmoud\Desktop\Cources\Course_C#\Database-Connect\bin\Debug\DatabaseConnect.exe.config
+C:\Users\Mahmoud\Desktop\Cources\Course_C#\Database-Connect\bin\Debug\DatabaseConnect.exe
+C:\Users\Mahmoud\Desktop\Cources\Course_C#\Database-Connect\bin\Debug\DatabaseConnect.pdb
+C:\Users\Mahmoud\Desktop\Cources\Course_C#\Database-Connect\obj\Debug\DatabaseConnect.csproj.AssemblyReference.cache
+C:\Users\Mahmoud\Desktop\Cources\Course_C#\Database-Connect\obj\Debug\DatabaseConnect.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud\Desktop\Cources\Course_C#\Database-Connect\obj\Debug\DatabaseConnect.exe
+C:\Users\Mahmoud\Desktop\Cources\Course_C#\Database-Connect\obj\Debug\DatabaseConnect.pdb
